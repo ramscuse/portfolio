@@ -1,15 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Routes, Route, Link } from 'react-router-dom';
+import Home from './Components/Home';
+import About from './Components/About';
+import Contact from './Components/Contact';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello from V2</h1>
-      </header>
-    </div>
+      <div>
+        <nav className="navbar">
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" exact element= { <Home/> } />
+          <Route path="/about" element= { <About/> } />
+          <Route path="/contact" element= { <Contact/> } />
+        </Routes>
+      </div>
   );
 }
 
