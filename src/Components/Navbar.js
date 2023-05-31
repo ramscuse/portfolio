@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/Navbar.css'
 import { useNavigate } from 'react-router-dom';
 import git from '../imgs/github.png'
-import linkin from '../imgs/linkedin.webp'
+import linkin from '../imgs/linkedin.png'
 
 function Navbar() {
     const navigate = useNavigate();
