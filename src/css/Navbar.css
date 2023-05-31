@@ -21,8 +21,33 @@
     background-color: #819595;
 }
 
+#git {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1.2rem;
+}
+
+#linkedIn {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1.2rem;
+}
+
 @media only screen and (max-width: 480px) {
     .navbar ul li {
         font-size: 1rem;
+        padding: 1.2rem
+    }
+
+    #git {
+        width: 3rem;
+        height: 3rem;
+        margin-top: .6rem;
+    }
+    
+    #linkedIn {
+        width: 3rem;
+        height: 3rem;
+        margin-top: .6rem;
     }
 }
