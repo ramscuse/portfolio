@@ -1,0 +1,20 @@
+.navbar ul {
+    background-color: darkblue;
+    display: flex;
+    margin: auto;
+  
+    letter-spacing: -0.075em;
+    color: #FFFFFF;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    float: left;
+    padding: 1.5rem;
+    margin: .2rem;
+    font-size: 1rem;
+}
+
+.navbar ul li:hover {
+    background-color: blue;
+}
