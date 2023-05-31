@@ -1,7 +1,9 @@
 .navbar ul {
-    background-color: darkblue;
+    background-color: black;
     display: flex;
     margin: auto;
+    padding: 0;
+    justify-content: center;
   
     letter-spacing: -0.075em;
     color: #FFFFFF;
@@ -12,9 +14,15 @@
     float: left;
     padding: 1.5rem;
     margin: .2rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .navbar ul li:hover {
-    background-color: blue;
+    background-color: #819595;
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar ul li {
+        font-size: 1rem;
+    }
 }

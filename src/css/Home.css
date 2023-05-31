@@ -1,0 +1,25 @@
+.homebody {
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#headshot {
+    width: 30rem;
+}
+
+#txt {
+    width: 25rem;
+    margin: auto;
+}
+
+@media only screen and (max-width: 480px) {
+    #headshot {
+        width: 17.5rem;
+    }
+    #txt {
+        width: 100%
+    }
+}
