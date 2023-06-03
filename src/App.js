@@ -8,7 +8,7 @@ import './css/App.css';
 
 function App() {
   return (
-      <div>
+      <div id='page'>
         <Navbar/>
         <Routes>
           <Route path="/" exact element= { <Home/> } />
