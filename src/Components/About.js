@@ -5,6 +5,7 @@ import resume from '../downloads/WalterResume.docx';
 import { Storage } from "aws-amplify";
 
 function About() {
+  const file =  Storage.get("WalterResume.pdf", { level: "public" });
 
   function Rating(stars) {
     let starlist = [];
@@ -23,13 +24,6 @@ function About() {
       </div>
     )
   }
-
-  async function genResumeDownloadLink() {
-    const file = await Storage.get("WalterResume.pdf", { level: "public", download: "true" });
-    console.log(file.body())
-  }
-
-  genResumeDownloadLink()
 
   return (
     <div className='aboutBody'>

@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "portfolio": {}
+      },
+      "storage": {
+        "s3portfoliostoragec97994c0": {}
       }
     }
   }
