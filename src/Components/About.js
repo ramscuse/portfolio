@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/About.css';
-import resume from '../downloads/WalterResume.docx'
+import resume from '../downloads/WalterResume.docx';
+
+import { Storage } from "aws-amplify";
 
 function About() {
 
@@ -21,6 +23,13 @@ function About() {
       </div>
     )
   }
+
+  async function genResumeDownloadLink() {
+    const file = await Storage.get("WalterResume.pdf", { level: "public", download: "true" });
+    console.log(file.body())
+  }
+
+  genResumeDownloadLink()
 
   return (
     <div className='aboutBody'>
