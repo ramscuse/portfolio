@@ -1,11 +1,9 @@
 import React from 'react';
 import '../css/About.css';
-import resume from '../downloads/WalterResume.docx';
 
 import { Storage } from "aws-amplify";
 
 function About() {
-  const file =  Storage.get("WalterResume.pdf", { level: "public" });
 
   function Rating(stars) {
     let starlist = [];
@@ -25,11 +23,29 @@ function About() {
     )
   }
 
+  function downloadFile(file, filename) {
+    const url = URL.createObjectURL(file);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename || 'download';
+    const clickHandler = () => {
+      setTimeout(() => {
+        URL.revokeObjectURL(url);
+        a.removeEventListener('click', clickHandler);
+      }, 150);
+    };
+    a.addEventListener('click', clickHandler, false);
+    a.click();
+  }
+
+  async function download() {
+    const file = await Storage.get("WalterResume.pdf", { download: true });
+    downloadFile(file.Body, 'WalterResume');
+  }
+
   return (
     <div className='aboutBody'>
-      <a href={resume} download='WalterResume.pdf' target='_blank'>
-        <button id='resumedownload'>Download My Resume</button>
-      </a>
+      <button id='resumedownload' onClick={download}>Download My Resume</button>
 
       <div id='intrests'>
         <h2>My Intrests</h2>
