@@ -24,7 +24,7 @@ function About() {
 
   return (
     <div className='aboutBody'>
-      <a href={resume} download='WalterResume.docx' target='_blank'>
+      <a href={resume} download='WalterResume.pdf' target='_blank'>
         <button id='resumedownload'>Download My Resume</button>
       </a>
 

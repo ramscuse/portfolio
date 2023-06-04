@@ -39,7 +39,6 @@ h2{
     line-height: 1.5rem;
     float: left;
     display: inline;
-    width: 25%;
 }
 
 .listskills {
@@ -49,7 +48,6 @@ h2{
 .listitemskills {
     display: inline-flex;
     justify-content: space-between;
-    width: 50%;
 }
 
 .starcontainer {
@@ -73,9 +71,16 @@ h2{
     height: 9px;
     width: 9px;
 }
+
 @media only screen and (min-width: 481px) {
     #skillsmobile {
         display: none;
+    }
+    .listitem {
+        width: 25%;
+    }
+    .listitemskills {
+        width: 50%;
     }
 }
 
@@ -93,5 +98,8 @@ h2{
     }
     #skills {
         display: none;
+    }
+    .listitem {
+        width: 50%;
     }
 }
