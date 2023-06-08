@@ -130,6 +130,14 @@ function About() {
           </ul>
         </div>
       </div>
+
+      <div id="volunteer">
+        <h2>Volunteer Work</h2>
+        <p>YMSL (Young Men's Service League) is an organization that assists across Colorado to better
+             our community and improve mother-son relationships. My mom and I have volunteered at homeless
+              shelters, elder homes, Homeward Alliance, Respite Care, and many more. 
+              What we do at YMSL is the proudest and most rewarding work I have ever done.</p>
+      </div>
     </div>
   );
 }
