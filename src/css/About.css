@@ -72,6 +72,36 @@ h2{
     width: 9px;
 }
 
+#experience div {
+    text-align: left;
+}
+
+#experience h4 {
+    margin: 0;
+}
+
+#experience p {
+    margin: 0;
+}
+#experience ul {
+    margin: 0;
+    padding-top: 10px;
+}
+
+
+#experiencetitle {
+    padding-top: 10px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#experiencename {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
 @media only screen and (min-width: 481px) {
     #skillsmobile {
         display: none;

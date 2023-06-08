@@ -64,7 +64,7 @@ function About() {
       <div id='skills'>
         <h2>My Skills</h2>
         <ul class='list listskills'>
-          <li class='listitem listitemskills'>Java (4+ years) {Rating(3)}</li>
+          <li class='listitem listitemskills'>Java (4+ years) {Rating(4)}</li>
           <li class='listitem listitemskills'>C++ (2+ years) {Rating(3)}</li>
           <li class='listitem listitemskills'>React (3+ years) {Rating(5)}</li>
           <li class='listitem listitemskills'>SQL (2+ years) {Rating(2)}</li>
@@ -80,7 +80,7 @@ function About() {
       <div id='skillsmobile'>
         <h2>My Skills</h2>
         <ul class='list listskills'>
-          <li class='listitem listitemskills'>Java {Rating(3)}</li>
+          <li class='listitem listitemskills'>Java {Rating(4)}</li>
           <li class='listitem listitemskills'>C++ {Rating(3)}</li>
           <li class='listitem listitemskills'>React {Rating(5)}</li>
           <li class='listitem listitemskills'>SQL {Rating(2)}</li>
@@ -91,6 +91,44 @@ function About() {
           <li class='listitem listitemskills'>C {Rating(3)}</li>
           <li class='listitem listitemskills'>AWS {Rating(2)}</li>
         </ul>
+      </div>
+
+      <div id="experience">
+        <h2>Experience</h2>
+        <div>
+          <div id="experiencetitle">
+            <h4>Software Engineering Intern</h4>
+            <p>May 2022 - Aug 2022</p>
+          </div>
+          <div id="experiencename">
+            <p>beanTech Solutions</p>
+            <p>Fort Collins, CO</p>
+          </div>
+          <ul>
+            <li>Programmed in a team environment using GitHub and the Agile development Process.</li>
+            <li>Developed front end web applications using React and Potree with seamless backend integration.</li>
+            <li>Fast paced environment.</li>
+            <li>Utilized Clean Code Techniques to make code easier to read/understand.</li>
+            <li>Gave me the skills to collaborate in a team and make a profitable product.</li>
+          </ul>
+        </div>
+        <div>
+          <div id="experiencetitle">
+            <h4>Manager</h4>
+            <p>Aug 2021 - Current</p>
+          </div>
+          <div id="experiencename">
+            <p>Finish Line</p>
+            <p>Fort Collins, CO</p>
+          </div>
+          <ul>
+            <li>Managed and lead teams to reach our daily goals.</li>
+            <li>Ensured every person in the store would recieve quality customer service from either me or my team members</li>
+            <li>Helped diagnos IT issues, such as POS Errors and Networking Errors, when they would arrise in store.</li>
+            <li>Created sales forcasts and labor budgets for the week. These would allow me to create inclusive schedules that alligned with everybodies desired hours.</li>
+            <li>Awared Employee of the Month 6 times.</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
