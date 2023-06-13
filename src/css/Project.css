@@ -1,0 +1,21 @@
+.projectBody {
+    width: 40%;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+@media only screen and (min-width: 481px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+    .projectBody {
+        width: 80%;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        color: white;
+    }
+}
