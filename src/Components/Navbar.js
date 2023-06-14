@@ -25,8 +25,8 @@ function Navbar() {
                 <li onClick={home}>Home</li>
                 <li onClick={about}>About</li>
                 <li onClick={project}>Projects</li>
-                <a href='https://github.com/ramscuse' target='_blank'><img id='git' src={git} alt='github'/></a>
-                <a href='https://www.linkedin.com/in/jameson-walter-587388184/' target='_blank'><img id='linkedIn' src={linkin} alt='linkedIn'/></a>
+                <a href='https://github.com/ramscuse' target='_blank' rel="noopener noreferrer"><img id='git' src={git} alt='github'/></a>
+                <a href='https://www.linkedin.com/in/jameson-walter-587388184/' target='_blank' rel="noopener noreferrer"><img id='linkedIn' src={linkin} alt='linkedIn'/></a>
             </ul>
         </nav>
     );
