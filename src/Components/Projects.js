@@ -22,6 +22,10 @@ function Project() {
       </div>
       <div id='portfolio'>
         <h2>Portfolio Website</h2>
+        <ul>
+          <li>Hello</li>
+          <li>this is a test</li>
+        </ul>
         <a href='https://github.com/ramscuse/portfolio' target='_blank' rel="noopener noreferrer">
           <button>Check out the Code</button>
         </a>
