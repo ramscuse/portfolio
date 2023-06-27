@@ -29,23 +29,34 @@ function Project() {
           names of places and coordinates.
         </p>
         <img id='List' src={list} alt='Itinerary List'/>
-        <p>Here is an example of what the list of places would look like once the user adds places to their trip.</p>
+        <p>
+          Here is an example of what the list of places would look like once the user adds places to their trip. If you want to learn 
+          more about the project, feel free to reach out to me or check out the code below.
+        </p>
         <a href='https://github.com/ramscuse/cs314' target='_blank' rel="noopener noreferrer">
           <button>Check out the Code</button>
         </a>
       </div>
       <div id='portfolio'>
         <h2>Portfolio Website</h2>
-        <ul>
-          <li>Hello</li>
-          <li>this is a test</li>
-        </ul>
+        <p>
+          This is the website you are currently browser! I hope you are enjoying it so far.
+        </p>
+        <p>
+          I built this website from the group up using React for the front-end and AWS for the back-end. The code is being hosted on github 
+          and deployed using AWS.
+        </p>
         <a href='https://github.com/ramscuse/portfolio' target='_blank' rel="noopener noreferrer">
           <button>Check out the Code</button>
         </a>
       </div>
       <div id='beantech'>
         <h2>Store Front</h2>
+        <p>
+          During my internship, my most notable project was to build a blank but functional store front small business could fill in with
+          their product. Some of my code was used to create the Lima's Coffee website.
+        </p>
+        <a href='https://www.limacoffeeroasters.com/collections/coffee' target='_blank' rel="noopener noreferrer">Lima's Website</a>
         <a href="https://github.com/ramscuse/project2" target='_blank' rel="noopener noreferrer">
           <button>Check out the Code</button>
         </a>
