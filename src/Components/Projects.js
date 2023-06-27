@@ -13,9 +13,23 @@ function Project() {
     <div className='projectBody'>
       <div id='trip'>
         <h2>Trip Itinerary</h2>
+        <p>
+          This was a class project that spanned the length of an entire semester. I worked in a team of 3 people throughout the year. 
+          We used a Scrum based system to build a working product with each team member acting as a different role each week. Unfortunatly, 
+          there is no public version of the site that can be easily viewed.
+        </p>
         <img id='Schedule' src={Schedule} alt='Itinerary Home'/>
+        <p>
+          This was the main page of the website where you can easily view each place in your trip either in a list or on the map. There is 
+          also an option to download the trip to your local computer or upload from your computer.
+        </p>
         <img id='Search' src={Search} alt='Itinerary Search'/>
+        <p>
+          The search bar we built makes verifies and preforms SQL searches in a database and returns the top 5 results. It is capable of searching 
+          names of places and coordinates.
+        </p>
         <img id='List' src={list} alt='Itinerary List'/>
+        <p>Here is an example of what the list of places would look like once the user adds places to their trip.</p>
         <a href='https://github.com/ramscuse/cs314' target='_blank' rel="noopener noreferrer">
           <button>Check out the Code</button>
         </a>
