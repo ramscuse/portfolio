@@ -39,8 +39,8 @@ function About() {
   }
 
   async function download() {
-    const file = await Storage.get("WalterResume.pdf", { download: true });
-    downloadFile(file.Body, 'WalterResume');
+    const file = await Storage.get("JamesonWResume.pdf", { download: true });
+    downloadFile(file.Body, 'JamesonWResume');
   }
 
   return (
