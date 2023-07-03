@@ -39,7 +39,7 @@ function About() {
   }
 
   async function download() {
-    const file = await Storage.get("JamesonWResume.pdf", { download: true });
+    const file = await Storage.get("JamesonWResumeWebsite.pdf", { download: true });
     downloadFile(file.Body, 'JamesonWResume');
   }
 
