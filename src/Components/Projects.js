@@ -11,6 +11,15 @@ import color from '../imgs/color.png'
 function Project() {
   return (
     <div className='projectBody'>
+      <div id='zombie'>
+        <h2>Zombie FPS</h2>
+      </div>
+      <div id='projectManager'>
+        <h2>Company Project Manager</h2>
+      </div>
+      <div id='chess'>
+        <h2>Chess Game</h2>
+      </div>
       <div id='trip'>
         <h2>Trip Itinerary</h2>
         <p>
