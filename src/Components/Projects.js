@@ -13,12 +13,20 @@ function Project() {
     <div className='projectBody'>
       <div id='zombie'>
         <h2>Zombie FPS</h2>
+        <p>
+          I built a first-person shooter game from the ground up using Unity's game engine. Due to time constraints, there are still 
+          some bugs present. It's a round-based zombie game heavily inspired by Call of Duty's zombie mode. The goal is to survive 
+          as long as possible by utilizing the various weapons scattered around the map.
+        </p>
       </div>
       <div id='projectManager'>
         <h2>Company Project Manager</h2>
-      </div>
-      <div id='chess'>
-        <h2>Chess Game</h2>
+        <p>
+          This class project aimed to utilize different testing strategies. While the back-end code and RESTController are 
+          fully functional, the front-end lacks some functionality related to assigning and unassigning tasks. To achieve high 
+          test coverage, we extensively used ISP tables and use case diagrams throughout the project. Jest and JUnit were the 
+          two primary testing libraries employed.
+        </p>
       </div>
       <div id='trip'>
         <h2>Trip Itinerary</h2>
