@@ -63,14 +63,14 @@ function About() {
       <div id="skills">
         <h2>My Skills</h2>
         <ul class="list listskills">
-          <li class="listitem listitemskills">Java (4+ years) {Rating(4)}</li>
-          <li class="listitem listitemskills">C++ (2+ years) {Rating(3)}</li>
-          <li class="listitem listitemskills">React (3+ years) {Rating(5)}</li>
-          <li class="listitem listitemskills">SQL (2+ years) {Rating(2)}</li>
+          <li class="listitem listitemskills">Java (5+ years) {Rating(4)}</li>
+          <li class="listitem listitemskills">C++ (3+ years) {Rating(3)}</li>
+          <li class="listitem listitemskills">React (4+ years) {Rating(5)}</li>
+          <li class="listitem listitemskills">SQL (3+ years) {Rating(4)}</li>
           <li class="listitem listitemskills">HTML (2+ years) {Rating(4)}</li>
           <li class="listitem listitemskills">CSS (2+ years) {Rating(3)}</li>
-          <li class="listitem listitemskills">PHP (1+ year) {Rating(3)}</li>
-          <li class="listitem listitemskills">Python (3+ years) {Rating(2)}</li>
+          <li class="listitem listitemskills">PHP (1+ year) {Rating(2)}</li>
+          <li class="listitem listitemskills">Python (3+ years) {Rating(3)}</li>
           <li class="listitem listitemskills">C (2+ years) {Rating(3)}</li>
           <li class="listitem listitemskills">AWS (1- year) {Rating(2)}</li>
         </ul>
@@ -82,11 +82,11 @@ function About() {
           <li class="listitem listitemskills">Java {Rating(4)}</li>
           <li class="listitem listitemskills">C++ {Rating(3)}</li>
           <li class="listitem listitemskills">React {Rating(5)}</li>
-          <li class="listitem listitemskills">SQL {Rating(2)}</li>
+          <li class="listitem listitemskills">SQL {Rating(4)}</li>
           <li class="listitem listitemskills">HTML {Rating(4)}</li>
           <li class="listitem listitemskills">CSS {Rating(3)}</li>
-          <li class="listitem listitemskills">PHP {Rating(3)}</li>
-          <li class="listitem listitemskills">Python {Rating(2)}</li>
+          <li class="listitem listitemskills">PHP {Rating(2)}</li>
+          <li class="listitem listitemskills">Python {Rating(3)}</li>
           <li class="listitem listitemskills">C {Rating(3)}</li>
           <li class="listitem listitemskills">AWS {Rating(2)}</li>
         </ul>
