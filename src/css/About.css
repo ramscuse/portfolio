@@ -105,6 +105,7 @@ h2 {
 #experience p {
   margin: 0;
 }
+
 #experience ul {
   margin: 0;
   padding-top: 10px;
@@ -127,7 +128,18 @@ h2 {
   text-align: left;
 }
 
+#educationtitle {
+  padding-top: 10px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
 #education h4 {
+  margin: 0;
+}
+
+#education p {
   margin: 0;
 }
 
