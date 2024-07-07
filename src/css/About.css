@@ -110,11 +110,6 @@ h2 {
   padding-top: 10px;
 }
 
-#education ul {
-  margin: 0;
-  padding-top: 10px;
-}
-
 #experiencetitle {
   padding-top: 10px;
   width: 100%;
@@ -126,6 +121,19 @@ h2 {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
+}
+
+#education div {
+  text-align: left;
+}
+
+#education h4 {
+  margin: 0;
+}
+
+#education ul {
+  margin: 0;
+  padding-top: 10px;
 }
 
 @media only screen and (min-width: 481px) {

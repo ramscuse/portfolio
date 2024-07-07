@@ -184,7 +184,7 @@ function About() {
 
       <div id="education">
         <h2>Education</h2>
-        <div id="experiencetitle">
+        <div id="educationtitle">
           <h4>Colorado State University</h4>
           <p>August 2020 - May 2024</p>
         </div>
