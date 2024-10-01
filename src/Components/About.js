@@ -1,7 +1,6 @@
 import React from "react";
 import "../css/About.css";
-
-import { Storage } from "aws-amplify";
+import { download } from "../functions/Download";
 
 function About() {
   function Rating(stars) {
@@ -18,31 +17,9 @@ function About() {
     return <div class="starcontainer">{starlist}</div>;
   }
 
-  function downloadFile(file, filename) {
-    const url = URL.createObjectURL(file);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = filename || "download";
-    const clickHandler = () => {
-      setTimeout(() => {
-        URL.revokeObjectURL(url);
-        a.removeEventListener("click", clickHandler);
-      }, 150);
-    };
-    a.addEventListener("click", clickHandler, false);
-    a.click();
-  }
-
-  async function download() {
-    const file = await Storage.get("JamesonWResumeWebsite.pdf", {
-      download: true,
-    });
-    downloadFile(file.Body, "JamesonWResume");
-  }
-
   return (
     <div className="aboutBody">
-      <button id="resumedownload" onClick={download}>
+      <button id="resumedownload" onClick={() => download("JamesonWResumeWebsite.pdf", "JamesonWResume")}>
         Download My Resume
       </button>
 

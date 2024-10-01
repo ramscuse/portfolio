@@ -7,6 +7,7 @@ import menu from "../imgs/menu.png";
 import select from "../imgs/select.png";
 import game from "../imgs/game.png";
 import color from "../imgs/color.png";
+import { download } from "../functions/Download";
 
 function Project() {
   return (
@@ -20,6 +21,9 @@ function Project() {
           Duty's zombie mode. The goal is to survive as long as possible by
           utilizing the various weapons scattered around the map.
         </p>
+        <button id="resumedownload" onClick={() => download("ZombiesGameBuild.zip", "ZombiesGame")}>
+          Download Game
+        </button>
       </div>
       <div id="projectManager">
         <h2>Company Project Manager</h2>
