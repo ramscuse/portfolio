@@ -1,7 +1,6 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import '../css/Home.css';
 import photo1 from '../imgs/headshot.jpg';
-import { download } from '../functions/Download';
 import { scrollToSection } from '../utils/scroll';
 import { gsap } from 'gsap';
 
