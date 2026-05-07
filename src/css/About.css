@@ -1,181 +1,253 @@
-.aboutBody {
-  width: 40%;
-  margin: auto;
-  justify-content: center;
-  text-align: center;
-  color: white;
+.about-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
-#resumedownload {
-  background-color: #9993b2;
+.section-heading {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 2rem 0;
+}
+
+.about-section {
+  margin-bottom: 3.5rem;
+}
+
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  background: var(--accent);
+  color: var(--bg-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
   border: none;
-  color: black;
-  padding: 16px 32px;
-  text-align: center;
-  display: inline-block;
-  margin-top: 20px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
-  transition-duration: 0.4s;
+  margin-bottom: 3.5rem;
+  transition: opacity 0.2s, transform 0.2s;
 }
 
-#resumedownload:hover {
-  background-color: #a7abdd;
+.btn-resume:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
 }
 
-h2 {
-  padding-bottom: 5px;
-  border-bottom: 1px solid white;
+/* ── Skills tag chips ── */
+.skills-group {
+  margin-bottom: 1.25rem;
 }
 
-.list {
-  text-align: center;
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
+.skills-group-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0 0 0.6rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
-.listitem {
-  line-height: 1.5rem;
-  float: left;
-  display: inline;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.listskills {
-  text-align: left;
+.tag {
+  background: var(--accent-dim);
+  border: 1px solid var(--border-glow);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  border-radius: 4px;
+  padding: 3px 10px;
+  white-space: nowrap;
 }
 
-.listitemskills {
-  display: inline-flex;
-  justify-content: space-between;
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
 }
 
-.starcontainer {
-  width: 55px;
-  padding-right: 50px;
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--border);
+  border-radius: 1px;
 }
 
-.star {
-  background: gold;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-  display: inline-block;
-  height: 10px;
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.75rem;
+  top: 6px;
   width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg-primary);
+  box-shadow: 0 0 8px var(--accent);
 }
 
-.staropen {
-  background: white;
-  border: 1px solid black;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-  display: inline-block;
-  height: 9px;
-  width: 9px;
-}
-
-#experience div {
-  text-align: left;
-}
-
-#experience h4 {
-  margin: 0;
-}
-
-#experience p {
-  margin: 0;
-}
-
-#experience ul {
-  margin: 0;
-  padding-top: 10px;
-}
-
-#experiencetitle {
-  padding-top: 10px;
-  width: 100%;
-  display: inline-flex;
+.timeline-header {
+  display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
-#experiencename {
-  width: 100%;
-  display: inline-flex;
-  justify-content: space-between;
-}
-
-#education div {
-  text-align: left;
-}
-
-#educationtitle {
-  padding-top: 10px;
-  width: 100%;
-  display: inline-flex;
-  justify-content: space-between;
-}
-
-#education h4 {
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
   margin: 0;
 }
 
-#education p {
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.timeline-company {
+  font-size: 0.875rem;
+  color: var(--accent);
+  margin: 0 0 0.75rem 0;
+}
+
+.timeline-item ul {
   margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
-#education ul {
+.timeline-item ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* ── Education ── */
+.education-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.education-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.education-card .edu-dates {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem 0;
+}
+
+.education-card ul {
   margin: 0;
-  padding-top: 10px;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
-@media only screen and (min-width: 481px) {
-  #skillsmobile {
-    display: none;
-  }
-  .listitem {
-    width: 25%;
-  }
-  .listitemskills {
-    width: 50%;
-  }
+/* ── Volunteer ── */
+.volunteer-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
 }
 
-@media only screen and (max-width: 480px) {
-  .aboutBody {
-    width: 80%;
-    margin: auto;
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .about-body {
+    padding: 3rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-section {
+    margin-bottom: 2.75rem;
+  }
+
+  .btn-resume {
+    width: 100%;
     justify-content: center;
-    text-align: center;
-    color: white;
+    margin-bottom: 2.75rem;
   }
-  .starcontainer {
-    width: 55px;
-    padding-right: 10px;
+
+  /* Tighten the timeline indentation on small screens */
+  .timeline {
+    padding-left: 1.25rem;
   }
-  #skills {
-    display: none;
+
+  .timeline-item::before {
+    left: -1.5rem;
+    width: 9px;
+    height: 9px;
   }
-  .listitem {
-    width: 50%;
+
+  .timeline-header {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .timeline-item ul {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+  }
+
+  .education-card {
+    padding: 1.25rem;
+  }
+
+  .education-card ul {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+  }
+
+  .volunteer-text {
+    font-size: 0.9rem;
+    padding: 1.25rem;
   }
 }

@@ -6,16 +6,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "amplify": "^0.0.11",
-    "aws": "^0.0.3-2",
-    "aws-amplify": "^5.2.4",
-    "localforage": "^1.10.0",
-    "match-sorter": "^6.3.1",
+    "gsap": "^3.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "^5.0.1",
-    "sort-by": "^0.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -41,5 +36,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^3.4.19"
   }
 }

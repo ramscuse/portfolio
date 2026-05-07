@@ -1,199 +1,195 @@
-import React from "react";
-import "../css/Project.css";
-import Schedule from "../imgs/Schedule.png";
-import Search from "../imgs/Search.png";
-import list from "../imgs/list.png";
-import menu from "../imgs/menu.png";
-import select from "../imgs/select.png";
-import game from "../imgs/game.png";
-import color from "../imgs/color.png";
-import { download } from "../functions/Download";
+import React, { useLayoutEffect } from 'react';
+import '../css/Project.css';
+import { download } from '../functions/Download';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-function Project() {
+gsap.registerPlugin(ScrollTrigger);
+
+const featuredProjects = [
+  {
+    title: 'healthtrkr',
+    meta: 'React · Express · PostgreSQL · Prisma · Docker — 2025–Present',
+    desc: 'Full-stack health and fitness tracker with calorie and protein logging, weekly progress charts, and USDA food database integration. Features JWT auth, PostgreSQL with Prisma ORM, and a Dockerized dev environment.',
+    tags: ['React', 'Express', 'PostgreSQL', 'Prisma', 'Docker', 'JWT'],
+    github: 'https://github.com/ramscuse/healthtrkr',
+    featured: true,
+  },
+  {
+    title: 'Chess Game',
+    meta: 'React · TypeScript · Java · SQL · UNIX — Aug–Dec 2023',
+    desc: 'Async multiplayer chess built with an Agile team. Uses two SQL databases to manage user accounts and live game state, with a React/TypeScript frontend and Java backend running on UNIX servers.',
+    tags: ['React', 'TypeScript', 'Java', 'SQL', 'UNIX'],
+    featured: true,
+  },
+  {
+    title: 'Trip Itinerary',
+    meta: 'React · Docker · REST · Optimization — Semester project',
+    desc: 'Scrum-based semester project with a team of 3. Built a trip planning app with map/list views, trip upload/download, and a search engine using SQL and optimization algorithms to sort results.',
+    tags: ['React', 'Docker', 'SQL', 'REST', 'Scrum'],
+    github: 'https://github.com/ramscuse/cs314',
+    featured: true,
+  },
+  {
+    title: 'Portfolio Website',
+    meta: 'React · Tailwind CSS · GSAP · Vercel',
+    desc: "The site you're on right now. Built with React, redesigned with a dark/glassmorphism aesthetic, GSAP scroll animations, and deployed on Vercel with automatic CI/CD from GitHub.",
+    tags: ['React', 'Tailwind CSS', 'GSAP', 'Vercel'],
+    github: 'https://github.com/ramscuse/portfolio',
+    featured: true,
+  },
+];
+
+const moreProjects = [
+  {
+    title: 'Zombie FPS',
+    meta: 'Unity · C#',
+    desc: 'First-person round-based zombie shooter built in Unity, heavily inspired by Call of Duty Zombies. Goal: survive as long as possible using weapons scattered around the map.',
+    tags: ['Unity', 'C#'],
+    download: { label: 'Download Game', file: 'ZombiesGameBuild.zip' },
+  },
+  {
+    title: 'Company Project Manager',
+    meta: 'Java · Jest · JUnit · TDD',
+    desc: 'Test-driven class project using ISP tables and use case diagrams. Fully functional REST backend with Jest and JUnit achieving high test coverage.',
+    tags: ['Java', 'REST', 'JUnit', 'Jest', 'TDD'],
+  },
+  {
+    title: 'Store Front (beanTech)',
+    meta: 'React · JavaScript',
+    desc: "Blank-but-functional storefront template built during internship. Some of my code powers Lima's Coffee Roasters website.",
+    tags: ['React', 'JavaScript'],
+    links: [
+      { label: "Lima's Website", href: 'https://www.limacoffeeroasters.com/collections/coffee' },
+      { label: 'Code', href: 'https://github.com/ramscuse/project2' },
+    ],
+  },
+  {
+    title: 'Color Coordinate Website',
+    meta: 'PHP · JavaScript · SQL · HTML/CSS',
+    desc: 'Built from scratch using PHP (Fuel framework), JavaScript for an interactive color painter, and a SQL database for storing/modifying color palettes.',
+    tags: ['PHP', 'JavaScript', 'SQL'],
+    github: 'https://github.com/ramscuse/school/tree/master/local_html/m2',
+  },
+  {
+    title: 'Tron Game',
+    meta: 'Java · JavaFX',
+    desc: 'Tron light-cycle game built in Java with JavaFX. Includes custom collision detection, sprite rendering, and a simple AI opponent.',
+    tags: ['Java', 'JavaFX'],
+    github: 'https://github.com/ramscuse/TronGame/tree/main',
+  },
+  {
+    title: 'TV Show Schedule (C++)',
+    meta: 'C++',
+    desc: 'A C++ project demonstrating data structure usage and STL for managing and displaying a TV show schedule.',
+    tags: ['C++'],
+    links: [
+      { label: 'Schedule Code', href: 'https://github.com/ramscuse/school/tree/master/cs253/hw6' },
+      { label: 'More C++ Projects', href: 'https://github.com/ramscuse/school/tree/master/cs253' },
+    ],
+  },
+  {
+    title: 'DETER Projects',
+    meta: 'C · Systems Security',
+    desc: 'Used the DETER cybersecurity testbed to create and defend against various DOS attacks, most notably an SQL injection attack.',
+    tags: ['C', 'Systems Security', 'Networking'],
+  },
+];
+
+function ProjectCard({ project }) {
   return (
-    <div className="projectBody">
-      <div id="zombie">
-        <h2>Zombie FPS</h2>
-        <p>
-          I built a first-person shooter game from the ground up using Unity's
-          game engine. Due to time constraints, there are still some bugs
-          present. It's a round-based zombie game heavily inspired by Call of
-          Duty's zombie mode. The goal is to survive as long as possible by
-          utilizing the various weapons scattered around the map.
-        </p>
-        <button id="resumedownload" onClick={() => download("ZombiesGameBuild.zip", "ZombiesGame")}>
-          Download Game
-        </button>
+    <div className={`project-card${project.featured ? ' featured' : ''}`}>
+      <h3 className="project-card-title">{project.title}</h3>
+      <p className="project-card-meta">{project.meta}</p>
+      <p className="project-card-desc">{project.desc}</p>
+      <div className="project-card-tags">
+        {project.tags.map(t => <span key={t} className="project-tag">{t}</span>)}
       </div>
-      <div id="projectManager">
-        <h2>Company Project Manager</h2>
-        <p>
-          This class project aimed to utilize different testing strategies. The
-          entire project was built using test driven development. While the
-          back-end code and RESTController are fully functional, the front-end
-          lacks some functionality related to assigning and unassigning tasks.
-          This was due to a time constraints for our delivery date. To achieve
-          high test coverage, we extensively used ISP tables and use case
-          diagrams throughout the project. Jest and JUnit were the two primary
-          testing libraries employed.
-        </p>
-      </div>
-      <div id="trip">
-        <h2>Trip Itinerary</h2>
-        <p>
-          This was a class project that spanned the length of an entire
-          semester. I worked in a team of 3 people throughout the year. We used
-          a Scrum based system to build a working product with each team member
-          acting as a different role each week. Unfortunatly, there is no public
-          version of the site that can be easily viewed.
-        </p>
-        <img id="Schedule" src={Schedule} alt="Itinerary Home" />
-        <p>
-          This was the main page of the website where you can easily view each
-          place in your trip either in a list or on the map. There is also an
-          option to download the trip to your local computer or upload from your
-          computer.
-        </p>
-        <img id="Search" src={Search} alt="Itinerary Search" />
-        <p>
-          The search bar we built makes verifies and preforms SQL searches in a
-          database and returns the top 5 results. It is capable of searching
-          names of places and coordinates.
-        </p>
-        <img id="List" src={list} alt="Itinerary List" />
-        <p>
-          Here is an example of what the list of places would look like once the
-          user adds places to their trip. If you want to learn more about the
-          project, feel free to reach out to me or check out the code below.
-        </p>
-        <a
-          href="https://github.com/ramscuse/cs314"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Check out the Code</button>
-        </a>
-      </div>
-      <div id="portfolio">
-        <h2>Portfolio Website</h2>
-        <p>
-          This is the website you are currently browser! I hope you are enjoying
-          it so far.
-        </p>
-        <p>
-          I built this website from the ground up using React for the front-end
-          and AWS for the back-end. The code is being hosted on github and
-          deployed using AWS.
-        </p>
-        <a
-          href="https://github.com/ramscuse/portfolio"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Check out the Code</button>
-        </a>
-      </div>
-      <div id="beantech">
-        <h2>Store Front</h2>
-        <p>
-          During my internship, my most notable project was to build a blank but
-          functional store front small business could fill in with their
-          product. Some of my code was used to create the Lima's Coffee website.
-        </p>
-        <a
-          href="https://www.limacoffeeroasters.com/collections/coffee"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Lima's Website</button>
-        </a>
-        <a
-          href="https://github.com/ramscuse/project2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Check out the Code</button>
-        </a>
-      </div>
-      <div id="color">
-        <h2>Color Coordinate Website</h2>
-        <p>
-          This project was for another one of my classes. I built a website from
-          scratch using PHP, SQL, JavaScript, HTML, CSS, and fuel. It uses PHP
-          for the framework and JavaScript for the color painter. It also uses a
-          SQL database that the user can add or substract colors from.
-        </p>
-        <img id="color" src={color} alt="Color Coordinate Website" />
-        <a
-          href="https://github.com/ramscuse/school/tree/master/local_html/m2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Check out the Code</button>
-        </a>
-      </div>
-      <div id="deter">
-        <h2>DETER Projects</h2>
-        <p>
-          I used DETER in my systems secutities class. We used it to create and
-          defend against several different DOS attacks. Most notable being an
-          SQL injection attack.
-        </p>
-      </div>
-      <div id="tron">
-        <h2>Tron Game</h2>
-        <p>
-          I created this tron game in High School for fun. It was made
-          completely out of Java. I had to learn how to build collion detection
-          and how to render sprites in javafx. I also built a very simple AI
-          model that would play against the player.
-        </p>
-        <img id="menu" src={menu} alt="Game Menu" />
-        <img id="select" src={select} alt="Game Select" />
-        <img id="game" src={game} alt="Game" />
-        <a
-          href="https://github.com/ramscuse/TronGame/tree/main"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Check out the Code</button>
-        </a>
-      </div>
-      <div id="schedule">
-        <h2>TV Show Schedule</h2>
-        <p>
-          I have built a lot of tools using C++. The TV Show Schedule shows off
-          most of my skills in C++, but not everything. You can check out more
-          of my C++ projects on my gitHub.
-        </p>
-        <a
-          href="https://github.com/ramscuse/school/tree/master/cs253/hw6"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Check out the Code</button>
-        </a>
-        <br />
-        <a
-          href="https://github.com/ramscuse/school/tree/master/cs253"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Check more C++ Projects</button>
-        </a>
-      </div>
-      <div id="operating">
-        <h2>C Program</h2>
-        <a
-          href="https://github.com/ramscuse/school/tree/master/cs370/hw2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Check out the Code</button>
-        </a>
+      <div className="project-card-links">
+        {project.github && (
+          <a className="project-link" href={project.github} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        )}
+        {project.download && (
+          <button className="project-link" onClick={() => download(project.download.file)}>
+            {project.download.label}
+          </button>
+        )}
+        {project.links && project.links.map(l => (
+          <a key={l.label} className="project-link" href={l.href} target="_blank" rel="noopener noreferrer">
+            {l.label}
+          </a>
+        ))}
       </div>
     </div>
   );
 }
 
-export default Project;
+function Projects() {
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      // Section header fades in
+      gsap.from('.projects-section-heading, .projects-section-title', {
+        scrollTrigger: {
+          trigger: '.projects-body',
+          start: 'top 82%',
+          toggleActions: 'play none none none',
+        },
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: 'power3.out',
+      });
+
+      // Each grid animates its cards with a stagger
+      gsap.utils.toArray('.projects-grid').forEach((grid) => {
+        const cards = grid.querySelectorAll('.project-card');
+        gsap.from(cards, {
+          scrollTrigger: {
+            trigger: grid,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+          opacity: 0,
+          y: 32,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: 'power3.out',
+        });
+      });
+
+      gsap.from('.more-projects-title', {
+        scrollTrigger: {
+          trigger: '.more-projects-title',
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+        },
+        opacity: 0,
+        y: 16,
+        duration: 0.4,
+        ease: 'power2.out',
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <div className="projects-body">
+      <p className="projects-section-heading">{'// projects'}</p>
+      <h2 className="projects-section-title">Featured Work</h2>
+      <div className="projects-grid">
+        {featuredProjects.map(p => <ProjectCard key={p.title} project={p} />)}
+      </div>
+
+      <h3 className="more-projects-title">More Projects</h3>
+      <div className="projects-grid">
+        {moreProjects.map(p => <ProjectCard key={p.title} project={p} />)}
+      </div>
+    </div>
+  );
+}
+
+export default Projects;
