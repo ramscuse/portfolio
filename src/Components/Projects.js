@@ -9,16 +9,16 @@ gsap.registerPlugin(ScrollTrigger);
 const featuredProjects = [
   {
     title: 'healthtrkr',
-    meta: 'React · Express · PostgreSQL · Prisma · Docker — 2025–Present',
-    desc: 'Full-stack health and fitness tracker with calorie and protein logging, weekly progress charts, and USDA food database integration. Features JWT auth, PostgreSQL with Prisma ORM, and a Dockerized dev environment.',
-    tags: ['React', 'Express', 'PostgreSQL', 'Prisma', 'Docker', 'JWT'],
+    meta: 'React · Express · PostgreSQL · Prisma · Docker · GitHub Actions — 2025–Present',
+    desc: 'Full-stack fitness tracker (React/Vite, Express, PostgreSQL/Prisma) with JWT authentication, per-user data isolation, and food nutrition lookups with user-saved custom foods and meals. Containerized with Docker and automated releases via a GitHub Actions pipeline that publishes versioned images to GHCR for pull-based deploys to Vercel and a self-hosted server.',
+    tags: ['React', 'Express', 'PostgreSQL', 'Prisma', 'Docker', 'GitHub Actions', 'JWT'],
     github: 'https://github.com/ramscuse/healthtrkr',
     featured: true,
   },
   {
     title: 'Chess Game',
     meta: 'React · TypeScript · Java · SQL · UNIX — Aug–Dec 2023',
-    desc: 'Async multiplayer chess built with an Agile team. Uses two SQL databases to manage user accounts and live game state, with a React/TypeScript frontend and Java backend running on UNIX servers.',
+    desc: 'Asynchronous multiplayer chess platform with a React/TypeScript front-end and a Java back-end, separating user accounts and game state across two SQL databases, deployed on UNIX servers.',
     tags: ['React', 'TypeScript', 'Java', 'SQL', 'UNIX'],
     featured: true,
   },
@@ -46,7 +46,7 @@ const moreProjects = [
     meta: 'Unity · C#',
     desc: 'First-person round-based zombie shooter built in Unity, heavily inspired by Call of Duty Zombies. Goal: survive as long as possible using weapons scattered around the map.',
     tags: ['Unity', 'C#'],
-    download: { label: 'Download Game', file: 'ZombiesGameBuild.zip' },
+    download: { label: 'Download Game', file: 'https://ailhajmuhmtnb8vk.public.blob.vercel-storage.com/ZombiesGameBuild.zip?download=1' },
   },
   {
     title: 'Company Project Manager',

@@ -58,7 +58,7 @@ function About() {
 
   return (
     <div className="about-body">
-      <button className="btn-resume" onClick={() => download('JamesonWResumeWebsite.pdf')}>
+      <button className="btn-resume" onClick={() => download('https://ailhajmuhmtnb8vk.public.blob.vercel-storage.com/JamesonWalter_Resume.pdf?download=1')}>
         Download Resume
       </button>
 
@@ -68,7 +68,7 @@ function About() {
         <div className="skills-group">
           <p className="skills-group-label">Languages</p>
           <div className="tags">
-            {['TypeScript', 'JavaScript', 'Rust', 'Java', 'Python', 'C++', 'C', 'C#', 'PHP', 'Assembly'].map(s => (
+            {['TypeScript', 'JavaScript', 'Rust', 'Java', 'Python', 'Bash', 'C++', 'C', 'C#'].map(s => (
               <span key={s} className="tag">{s}</span>
             ))}
           </div>
@@ -76,7 +76,7 @@ function About() {
         <div className="skills-group">
           <p className="skills-group-label">Frameworks</p>
           <div className="tags">
-            {['React', 'Express', 'Node.js', 'Prisma', 'Tailwind CSS'].map(s => (
+            {['React', 'Actix', 'MUI', 'TanStack Query', 'Next.js', 'Express', 'Node.js', 'Tailwind CSS'].map(s => (
               <span key={s} className="tag">{s}</span>
             ))}
           </div>
@@ -92,7 +92,7 @@ function About() {
         <div className="skills-group">
           <p className="skills-group-label">Databases</p>
           <div className="tags">
-            {['PostgreSQL', 'SQL', 'MongoDB'].map(s => (
+            {['PostgreSQL', 'MySQL', 'Prisma'].map(s => (
               <span key={s} className="tag">{s}</span>
             ))}
           </div>
@@ -105,16 +105,20 @@ function About() {
         <div className="timeline">
           <div className="timeline-item">
             <div className="timeline-header">
-              <h3 className="timeline-title">Software Engineer I</h3>
+              <h3 className="timeline-title">Software Engineer</h3>
               <span className="timeline-date">Jun 2024 – Present</span>
             </div>
             <p className="timeline-company">SpaceNav — Boulder, CO</p>
             <ul>
-              <li>Built and maintained a React/TypeScript web application for real-time satellite data visualization used by operational clients.</li>
-              <li>Developed and maintained Rust APIs to manage data flow between all SpaceNav products.</li>
-              <li>Engineered AWS Lambda, EC2, and Step Functions pipelines for automated orbital analysis workflows.</li>
-              <li>Managed GCP services as part of on-call rotation, resolving incidents and maintaining uptime SLAs.</li>
-              <li>Drove adoption of Claude Code across the engineering team, improving developer velocity on complex tasks.</li>
+              <li>Engineered dynamic customer-facing apps used by 25 satellite operator organizations for orbit-determination, risk assessment, and maneuver-planning.</li>
+              <li>Built a Jobs management interface — input builder, result viewer, and reusable data-visualization components — that replaced manual AWS Step Functions console navigation, making job-execution workflows accessible to non-engineers.</li>
+              <li>Maintained and developed a RESTful API in Rust governing 25+ micro-services, 50+ Lambdas, and external customer integrations.</li>
+              <li>Designed and implemented the API-key authentication system and contributed to the permission model on SpaceNav's Rust/Actix core integration API, letting external customers integrate with our platform.</li>
+              <li>Scaled a Rust Lambda data-replication service from ~200 to ~60,000 rows per run using Rayon parallelism and async concurrency, fitting Lambda's 15-minute timeout to enable full-catalog AWS MySQL to GCP VM sync.</li>
+              <li>Created AWS Step Functions workflows for data-processing pipelines, building input-shim Lambdas that feed downstream MATLAB compute jobs and scheduled Lambdas that ingest external space-weather feeds.</li>
+              <li>Led an ongoing migration of legacy class-based JavaScript components to functional TypeScript with TanStack Query and MUI, modernizing the codebase's data-fetching and state management.</li>
+              <li>Supported company-wide on-call across AWS Lambda and GCP Compute Engine fleets, authoring shared Jupyter runbooks that cut mean time-to-resolution for recurring incidents by an estimated ~50%.</li>
+              <li>Pioneered Claude Code adoption across a 30-engineer org by authoring shared skills, prompt guardrails, and unit-test-generation tooling.</li>
             </ul>
           </div>
           <div className="timeline-item">
@@ -124,7 +128,7 @@ function About() {
             </div>
             <p className="timeline-company">beanTech Solutions — Fort Collins, CO</p>
             <ul>
-              <li>Developed full-stack web applications using JavaScript (React frontend) and Java backend with seamless integration.</li>
+              <li>Developed full-stack client features in JavaScript and Java, including a 3D drone-imagery map viewer that enabled remote construction site monitoring for stakeholders across multiple project phases.</li>
               <li>Worked in an Agile team environment using GitHub for version control and iterative delivery.</li>
               <li>Applied Clean Code techniques to improve readability, maintainability, and team collaboration.</li>
             </ul>
@@ -140,7 +144,7 @@ function About() {
           <p className="edu-dates">August 2020 – May 2024</p>
           <ul>
             <li>Bachelor of Science in Computer Science — Software Engineering concentration</li>
-            <li>GPA: 3.3</li>
+            <li>GPA: 3.6</li>
             <li>Relevant Coursework: Software Engineering, Operating Systems, Systems Security, Modern Web Applications, Systems Analysis &amp; Design, Computer Algorithms, Data Structures, Object-Oriented Design</li>
           </ul>
         </div>
