@@ -1,0 +1,155 @@
+.contact-body {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem 5rem;
+}
+
+.contact-section-heading {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem 0;
+}
+
+.contact-intro {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 0 2rem 0;
+}
+
+.contact-inline-link {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.contact-inline-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* ── Form card ── */
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 680px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:focus-within {
+  border-color: var(--border-glow);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.contact-field-row {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.contact-field label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.contact-field input,
+.contact-field textarea {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.65rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.contact-field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+/* ── Submit button (mirrors .project-link.primary) ── */
+.contact-submit {
+  align-self: flex-start;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--bg-primary);
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+.contact-submit:hover {
+  opacity: 0.85;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.25);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .contact-body {
+    padding: 3rem 1.25rem 4rem;
+  }
+
+  .contact-section-title {
+    font-size: 1.4rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-field-row {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .contact-submit {
+    align-self: stretch;
+    text-align: center;
+  }
+}

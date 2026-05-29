@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../css/Navbar.css';
 import git from '../imgs/github.png';
 import linkin from '../imgs/linkedin.png';
+import mail from '../imgs/mail.svg';
 import { scrollToSection } from '../utils/scroll';
+import { buildMailto } from '../utils/contact';
 
 const SECTIONS = ['home', 'about', 'projects'];
 
@@ -76,6 +78,9 @@ function Navbar() {
           <a href="https://www.linkedin.com/in/jameson-walter-587388184/" target="_blank" rel="noopener noreferrer">
             <img src={linkin} alt="LinkedIn" />
           </a>
+          <a href={buildMailto({ subject: 'Hello from your portfolio' })}>
+            <img src={mail} alt="Email" />
+          </a>
         </div>
 
         <button
@@ -110,6 +115,10 @@ function Navbar() {
             <a href="https://www.linkedin.com/in/jameson-walter-587388184/" target="_blank" rel="noopener noreferrer" tabIndex={menuOpen ? 0 : -1}>
               <img src={linkin} alt="LinkedIn" />
               <span>LinkedIn</span>
+            </a>
+            <a href={buildMailto({ subject: 'Hello from your portfolio' })} tabIndex={menuOpen ? 0 : -1}>
+              <img src={mail} alt="Email" />
+              <span>Email</span>
             </a>
           </div>
         </div>
